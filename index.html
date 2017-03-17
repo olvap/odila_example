@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ODILA - Denunciar Delitos Informáticos en Latinoamérica</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body id="page-top" class="index">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header  page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button><a class="navbar-brand" href="#page-top">
+          <img src="https://www.odila.org/imgs/logos/logo-odila.png"
+               alt="ODILA - Denunciar Delitos Informáticos en Latinoamérica">
+        </a></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="page-scroll"><a href="#Quienes">Quienes Somos</a></li><li class="page-scroll"><a href="#Denuncia">Denunciar</a></li><li class="page-scroll"><a href="glosario">Glosario</a></li><li class="page-scroll"><a href="difusion">Difusión</a></li><li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a>
+              <ul class="dropdown-menu"><li class="page-scroll"><a href="http://www.odila.org/reporte-2015">Reporte 2015</a></li><li class="page-scroll"><a href="http://www.odila.org/reporte">Reporte 2016</a></li></ul>
+            </li><li class="page-scroll"><a href="#Contacto">Contacto</a></li>
+          </ul>       </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <img src="https://www.odila.org/imgs/logos/logo-odila-big.png"
+               alt="ODILA - Denunciar Delitos Informáticos en Latinoamérica"
+               title="ODILA - Denunciar Delitos Informáticos en Latinoamérica"
+               class="img-responsive" >
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="Denuncia">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2>Denunciar delitos informáticos</h2>
+              <hr>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <p>Usted puede optar por realizar la denuncia de forma <strong>totalmente anónima</strong>, o bien, dejar algún dato para un eventual contacto. La información brindada sólo será utilizada con fines académicos y estadísticos.</p></p>
+              <hr>
+          </div>
+      </div>
+      <div id="waiting">&nbsp;</div>
+      <div class="row">
+	<denuncia></denuncia>
+      </div>
+    </div>
+  </section>
+
+  <script src="tags/denuncia.tag" type="riot/tag"></script>
+  <script src="https://cdn.jsdelivr.net/riot/3.1/riot+compiler.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <script>
+    // // base de datos de un millon de dolares.
+    // var bebidas = ['Cola', 'Limon', 'Cerveza']
+    // var salsas = ['Cheddar', 'Parmesano', 'Aji Picante', 'Chimichurri', 'Tartarina', 'Mayo con Aceitunas', 'Roquefort', 'Mostaza Dulce', 'Fugazetta', 'Mediterranea', 'Mexicana', 'Pollo', 'Choclo', 'Criolla', 'Tartara', 'Provenzal', 'Guacamole', 'Finas Hierbas', 'Jamon', 'Salame']
+    //
+    // var items = [
+    //   { title: 'Pancho', precio: 5, articulos: ['pancho'] },
+    //   { title: 'bebida', precio: 9, articulos: ['bebidas'] },
+    //   { title: 'Combo1', precio: 12, articulos: ['pancho', 'bebidas'] },
+    //   { title: 'Combo2', precio: 22, articulos: ['pancho', 'pancho', 'bebidas'] }
+    // ]
+    //
+    riot.mount('denuncia', {
+      title: 'hola'
+      // bebidas: bebidas,
+      // salsas: salsas,
+      // cart: [],
+      // items: items
+    })
+  </script>
+
+</body>
+</html>
