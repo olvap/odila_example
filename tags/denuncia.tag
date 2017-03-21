@@ -25,6 +25,7 @@
           <input type="radio" name="delito" value=2> Gran empresa (más de 100 empleados)<br>
           <input type="radio" name="delito" value=3> Organismo gubernamental<br>
           <div>
+            <button onclick={goto('residencia')}>Anterior</button>
             <button onclick={goto('incidente')}>Siguiente</button>
           </div>
         </fieldset>
@@ -47,16 +48,18 @@
           <input type="radio" name="incidente" value=10> Violación de Datos Personales: alguien está ofreciendo, comercializando, interceptando o modificando datos personales sin autorización<br>
           <input type="radio" name="incidente" value=11> Difusión de Malware: alguien está produciendo, distribuyendo, vendiendo o propagando malware o software malicioso<br>
           <div>
+            <button onclick={goto('delito')}>Anterior</button>
             <button onclick={goto('cuando')}>Siguiente</button>
           </div>
         </fieldset>
+        
         <fieldset show={state === 'cuando'}>
           <legend>
             4- ¿Cuándo ha ocurrido el incidente?
           </legend>
-          <input type="radio" name="cuando" value=0> ayer<br>
-          <input type="radio" name="cuando" value=1> OUAP<br>
+          <p>Fecha: <input type="text" id="datepicker"></p>
           <div>
+            <button onclick={goto('incidente')}>Anterior</button>
             <button onclick={goto('previa')}>Siguiente</button>
           </div>
         </fieldset>
@@ -67,8 +70,9 @@
           <input type="radio" name="previa" value=0> Sí, ya denuncié y la investigación está en curso<br>
           <input type="radio" name="previa" value=1> Sí, ya denuncié pero la investigación no avanzó<br>
           <input type="radio" name="previa" value=2> Sí, ya denuncié y ya se ha condenado al o los culpables.<br>
-          <input type="radio" name="previa" value=3> No, no denuncié porque...<br>
-                    <div>
+          <input type="radio" name="previa" value=3> <b>No, no denuncié porque...</b><br>
+          <div>
+            <button onclick={goto('cuando')}>Anterior</button>
             <button onclick={goto('causa')}>Siguiente</button>
           </div>
         </fieldset>
@@ -88,31 +92,34 @@
           <input type="radio" name="causa" value=8> No creo que la denuncia sea útil, porque el sistema penal no es apto para combatir el cibercrimen<br>
           <input type="radio" name="causa" value=8> Otros<br>
           <div>
+            <button onclick={goto('previa')}>Anterior</button>
             <button onclick={goto('edad')}>Siguiente</button>
           </div>
         </fieldset>
 
-                 <fieldset show={state === 'edad'}>
+        <fieldset show={state === 'edad'}>
           <legend>
-  7- Edad
+            7- Edad
           </legend>
           <input type="radio" name="edad" value=0> Menor a 21 años<br>
           <input type="radio" name="edad" value=1> Entre 22 y 35 años<br>
           <input type="radio" name="edad" value=2> Entre 36 y 45 años<br>
           <input type="radio" name="edad" value=3> Mayor a 45 años<br>
           <div>
+            <button onclick={goto('causa')}>Anterior</button>
             <button onclick={goto('genero')}>Siguiente</button>
           </div>
         </fieldset>
 
 
-          <fieldset show={state === 'genero'}>
+        <fieldset show={state === 'genero'}>
           <legend>
             8. Género
           </legend>
           <input type="radio" name="genero" value=0> Masculino
           <input type="radio" name="genero" value=1> Femenino
           <div>
+            <button onclick={goto('edad')}>Anterior</button>
             <button onclick={goto('nivel')}>Siguiente</button>
           </div>
         </fieldset>
@@ -126,6 +133,7 @@
           <input type="radio" name="nivel" value=2> Secundaria completa
           <input type="radio" name="nivel" value=3> Universitaria o Terciaria completa
           <div>
+            <button onclick={goto('genero')}>Anterior</button>
             <button onclick={goto('email')}>Siguiente</button>
           </div>
         </fieldset>
@@ -143,6 +151,7 @@
             Ante cualquier duda, puede ponerse en contacto.</p>
           <input type="radio" name="email" value=1> ok
           <div>
+            <button onclick={goto('nivel')}>Anterior</button>
             <button onclick={goto('residencia')}>Siguiente</button>
           </div>
         </fieldset>
